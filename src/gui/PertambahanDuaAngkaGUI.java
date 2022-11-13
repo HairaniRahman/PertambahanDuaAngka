@@ -136,6 +136,11 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         });
 
         KeluarBTN.setText("Keluar");
+        KeluarBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KeluarBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -153,7 +158,7 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
                 .addComponent(TambahBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
                 .addComponent(HapusBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
+                .addGap(62, 62, 62)
                 .addComponent(KeluarBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -214,6 +219,11 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         
         AngkaPertamaTF.requestFocus();
     }//GEN-LAST:event_HapusBTNActionPerformed
+
+    private void KeluarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KeluarBTNActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_KeluarBTNActionPerformed
 
     /**
      * @param args the command line arguments
