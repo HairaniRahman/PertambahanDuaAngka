@@ -4,6 +4,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HP OMEN
@@ -120,6 +122,11 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
         );
 
         TambahBTN.setText("Tambah");
+        TambahBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TambahBTNActionPerformed(evt);
+            }
+        });
 
         HapusBTN.setText("Hapus");
 
@@ -179,6 +186,20 @@ public class PertambahanDuaAngkaGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TambahBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TambahBTNActionPerformed
+        // TODO add your handling code here:
+        if(AngkaPertamaTF.getText().equals("") || AngkaKeduaTF.getText().equals("")){
+           JOptionPane.showMessageDialog(null, "INPUT TIDAK BOLEH KOSONG");
+        } else{
+       int AngkaPertama = Integer.valueOf(AngkaPertamaTF.getText());
+       int AngkaKedua = Integer.parseInt(AngkaKeduaTF.getText());
+       
+       int Hasil = AngkaPertama + AngkaKedua;
+       
+       HasilTF.setText(Integer.toString(Hasil));
+        }
+    }//GEN-LAST:event_TambahBTNActionPerformed
 
     /**
      * @param args the command line arguments
